@@ -49,13 +49,19 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
-function playToFive() {
+function playToFive(x) {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
     var gamesPlayed = 0;
+    var i;
 
-    for(var i = 0;i < 5;i ++)
+    if (x == null)
+    {
+        x = 5;
+    }
+  
+    for(var i = 0;i < x;i ++)
     {
         playOnce();
         gamesPlayed ++;
