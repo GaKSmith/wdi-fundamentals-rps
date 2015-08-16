@@ -58,14 +58,20 @@ function playToFive(x) {
 
     if (x == null)
     {
-        x = 5;
+        while ((computerWins < 5) && (playerWins < 5))
+        {
+            playOnce();
+        }
     }
-  
-    for(var i = 0;i < x;i ++)
+    else
     {
-        playOnce();
-        gamesPlayed ++;
+        for(var i = 0;i < x;i ++)
+        {
+            playOnce();
+            gamesPlayed ++;
+        }
     }
+
     function playOnce()
     {
         var pMove = getPlayerMove();
