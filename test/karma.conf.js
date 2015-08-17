@@ -8,14 +8,14 @@ module.exports = function(config) {
     basePath: '../',
     autoWatch: true,
     frameworks: ['jasmine'],
-    singleRun: false,
+    singleRun: true,
     colors: true,
     urlRoot: '_karma_',
     files: [
-      'bower_components/jquery/dist/jquery.js',
-      'app/js/**/*.js',
-      'test/spec/**/*.js'
-    ],
+      'app/js/**/*.js', {
+        pattern:'test/spec/**/*.js',
+        included: false,
+    }],
     exclude: [],
     port: 9876,
     browsers: [
