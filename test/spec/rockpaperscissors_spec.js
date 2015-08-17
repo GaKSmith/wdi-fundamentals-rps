@@ -1,4 +1,4 @@
-xdescribe("#getPlayerMove", function() {
+describe("#getPlayerMove", function() {
   describe("when a move is given as a parameter", function() {
     it("should return that move", function(){
       expect(getPlayerMove('rock')).toEqual('rock');
@@ -8,7 +8,7 @@ xdescribe("#getPlayerMove", function() {
   });
 });
 
-xdescribe("#getComputerMove", function() {
+describe("#getComputerMove", function() {
   describe("when a move is given as a parameter", function() {
     it("should return that move", function(){
       expect(getComputerMove('rock')).toEqual('rock');
@@ -18,7 +18,7 @@ xdescribe("#getComputerMove", function() {
   });
 });
 
-xdescribe("#getWinner", function() {
+describe("#getWinner", function() {
   var playerMove;
   describe("when the player picks rock", function() {
     beforeEach(function(){
